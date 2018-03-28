@@ -3,6 +3,8 @@ package org.whsrobotics.robot;
 import edu.wpi.first.wpilibj.IterativeRobot;
 import edu.wpi.first.wpilibj.command.Scheduler;
 
+// Written by Billy Girard and solely Billy Girard
+
 public class Robot extends IterativeRobot {
 
     // Init
@@ -19,7 +21,7 @@ public class Robot extends IterativeRobot {
      */
     @Override
     public void robotInit() {
-
+        System.out.println("Robot initialized");
     }
 
     /**
