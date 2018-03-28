@@ -1,11 +1,9 @@
 package org.whsrobotics.robot;
 
-import edu.wpi.first.wpilibj.IterativeRobot;
+import edu.wpi.first.wpilibj.TimedRobot;
 import edu.wpi.first.wpilibj.command.Scheduler;
 
-// Written by Billy Girard and solely Billy Girard
-
-public class Robot extends IterativeRobot {
+public class Robot extends TimedRobot {
 
     // Init
 
@@ -35,52 +33,6 @@ public class Robot extends IterativeRobot {
 
     }
 
-
-    // Test Functions
-
-    /**
-     * Initialization code for test mode should go here.
-     * <p>
-     * <p>Users should override this method for initialization code which will be called each time the
-     * robot enters test mode.
-     */
-    @Override
-    public void testInit() {
-
-    }
-
-    /**
-     * Periodic code for test mode should go here.
-     */
-    @Override
-    public void testPeriodic() {
-
-    }
-
-
-    // Autonomous Functions
-
-    /**
-     * Initialization code for autonomous mode should go here.
-     * <p>
-     * <p>Users should override this method for initialization code which will be called each time the
-     * robot enters autonomous mode.
-     */
-    @Override
-    public void autonomousInit() {
-
-    }
-
-    /**
-     * Periodic code for autonomous mode should go here.
-     */
-    @Override
-    public void autonomousPeriodic() {
-        Scheduler.getInstance().run();
-    }
-
-
-    // Periodic Functions
 
     /**
      * Initialization code for teleop mode should go here.
