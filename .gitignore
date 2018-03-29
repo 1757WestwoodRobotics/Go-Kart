@@ -1,0 +1,8 @@
+# Idea folder
+.idea/*
+
+# Idea IML files
+*.iml
+
+# Idea IPR files
+*.ipr
