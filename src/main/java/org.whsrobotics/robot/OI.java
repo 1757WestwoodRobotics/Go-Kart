@@ -1,11 +1,26 @@
 package org.whsrobotics.robot;
 
 import edu.wpi.first.wpilibj.Joystick;
-import edu.wpi.first.wpilibj.buttons.JoystickButton;
+
+import static org.whsrobotics.robot.RobotMap.FLIGHTSTICK;
 
 public class OI {
 
-    public OI() {
+    private static Joystick flightStick;
+
+
+    private OI() {
+
+        flightStick = new Joystick(FLIGHTSTICK);
 
     }
+
+    public static Joystick getFlightStick() {
+        return flightStick;
+    }
+
+    public static double flightstickCurve(double value) {
+        return value;
+    }
+
 }

@@ -5,6 +5,7 @@ import edu.wpi.first.wpilibj.SpeedControllerGroup;
 import edu.wpi.first.wpilibj.command.Subsystem;
 import edu.wpi.first.wpilibj.drive.DifferentialDrive;
 import edu.wpi.first.wpilibj.Encoder;
+import org.whsrobotics.robot.OI;
 import org.whsrobotics.robot.RobotMap;
 
 public class DriveTrain extends Subsystem {
@@ -21,27 +22,45 @@ public class DriveTrain extends Subsystem {
 
     private static DifferentialDrive differentialDrive;
 
-    public DriveTrain() {
+    private static DriveTrain instance;
 
-        try {
+    public DriveTrain() {
 
             leftFront = new WPI_TalonSRX(RobotMap.MotorControllers.DRIVE_LEFT_FRONT.tal);
             rightFront = new WPI_TalonSRX(RobotMap.MotorControllers.DRIVE_RIGHT_FRONT.tal);
             leftBack = new WPI_TalonSRX(RobotMap.MotorControllers.DRIVE_LEFT_BACK.tal);
             rightBack = new WPI_TalonSRX(RobotMap.MotorControllers.DRIVE_RIGHT_BACK.tal);
             leftMiddle = new WPI_TalonSRX(RobotMap.MotorControllers.DRIVE_LEFT_MIDDLE.tal);
-            rightMiddle = new WPI_TalonSRX(RobotMap.MotorControllers.DRIVE_RIGHT_MDDLE.tal);
-
-        } catch (NullPointerException e) {
-
-        }
+            rightMiddle = new WPI_TalonSRX(RobotMap.MotorControllers.DRIVE_RIGHT_MIDDLE.tal);
     }
-
-
-
 
 
     @Override
     protected void initDefaultCommand() {
     }
+
+    @Override
+    public void periodic() {
+    }
+
+    private static void drive(double speed, double rotation, boolean squaredInputs) {
+            differentialDrive.arcadeDrive(speed, rotation, squaredInputs);
+    }
+
+    public static void flightStickDrive(double speed, double rotation) {
+        drive(OI.flightstickCurve(speed),OI.flightstickCurve(rotation),true);
+    }
+
+    public static DriveTrain getInstance() {
+        if (instance == null) {
+            instance = new DriveTrain();
+        }
+
+        return instance;
+    }
+
+    public static void stopDrive() {
+        differentialDrive.stopMotor();
+    }
+
 }
