@@ -2,6 +2,7 @@ package org.whsrobotics.subsystems;
 
 import com.ctre.phoenix.motorcontrol.can.WPI_TalonSRX;
 import edu.wpi.first.wpilibj.SpeedControllerGroup;
+import edu.wpi.first.wpilibj.Talon;
 import edu.wpi.first.wpilibj.command.Subsystem;
 import edu.wpi.first.wpilibj.drive.DifferentialDrive;
 import edu.wpi.first.wpilibj.Encoder;
@@ -26,12 +27,18 @@ public class DriveTrain extends Subsystem {
 
     public DriveTrain() {
 
-            leftFront = new WPI_TalonSRX(RobotMap.MotorControllers.DRIVE_LEFT_FRONT.tal);
-            rightFront = new WPI_TalonSRX(RobotMap.MotorControllers.DRIVE_RIGHT_FRONT.tal);
-            leftBack = new WPI_TalonSRX(RobotMap.MotorControllers.DRIVE_LEFT_BACK.tal);
-            rightBack = new WPI_TalonSRX(RobotMap.MotorControllers.DRIVE_RIGHT_BACK.tal);
-            leftMiddle = new WPI_TalonSRX(RobotMap.MotorControllers.DRIVE_LEFT_MIDDLE.tal);
-            rightMiddle = new WPI_TalonSRX(RobotMap.MotorControllers.DRIVE_RIGHT_MIDDLE.tal);
+        leftFront = new WPI_TalonSRX(RobotMap.MotorControllers.DRIVE_LEFT_FRONT.tal);
+        rightFront = new WPI_TalonSRX(RobotMap.MotorControllers.DRIVE_RIGHT_FRONT.tal);
+        leftMiddle = new WPI_TalonSRX(RobotMap.MotorControllers.DRIVE_LEFT_MIDDLE.tal);
+        rightMiddle = new WPI_TalonSRX(RobotMap.MotorControllers.DRIVE_RIGHT_MIDDLE.tal);
+        leftBack = new WPI_TalonSRX(RobotMap.MotorControllers.DRIVE_LEFT_BACK.tal);
+        rightBack = new WPI_TalonSRX(RobotMap.MotorControllers.DRIVE_RIGHT_BACK.tal);
+
+        leftDrive = new SpeedControllerGroup(leftFront, leftMiddle, leftBack);
+        rightDrive = new SpeedControllerGroup(rightFront, rightMiddle, rightBack);
+
+        differentialDrive = new DifferentialDrive(leftDrive, rightDrive);
+
     }
 
 
