@@ -6,13 +6,23 @@ import static org.whsrobotics.robot.RobotMap.FLIGHTSTICK;
 
 public class OI {
 
-    private static Joystick flightStick;
+    public static Joystick flightStick;
+    public static OI instance;
+
 
 
     private OI() {
 
         flightStick = new Joystick(FLIGHTSTICK);
 
+    }
+
+    public static OI getInstance() {
+        if (instance == null) {
+            instance = new OI();
+        }
+
+        return instance;
     }
 
     public static Joystick getFlightStick() {

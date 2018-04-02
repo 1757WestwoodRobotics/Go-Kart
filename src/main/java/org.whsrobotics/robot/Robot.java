@@ -2,6 +2,7 @@ package org.whsrobotics.robot;
 
 import edu.wpi.first.wpilibj.TimedRobot;
 import edu.wpi.first.wpilibj.command.Scheduler;
+import org.whsrobotics.subsystems.DriveTrain;
 
 public class Robot extends TimedRobot {
 
@@ -20,7 +21,8 @@ public class Robot extends TimedRobot {
     @Override
     public void robotInit() {
 
-
+        DriveTrain.getInstance();
+        OI.getInstance();
 
         System.out.println("Robot initialized");
     }
