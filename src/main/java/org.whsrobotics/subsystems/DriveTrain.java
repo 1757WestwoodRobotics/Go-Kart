@@ -5,7 +5,6 @@ import edu.wpi.first.wpilibj.SpeedControllerGroup;
 import edu.wpi.first.wpilibj.Talon;
 import edu.wpi.first.wpilibj.command.Subsystem;
 import edu.wpi.first.wpilibj.drive.DifferentialDrive;
-import edu.wpi.first.wpilibj.Encoder;
 import org.whsrobotics.robot.OI;
 import org.whsrobotics.robot.RobotMap;
 
@@ -50,13 +49,10 @@ public class DriveTrain extends Subsystem {
     public void periodic() {
     }
 
-    private static void drive(double speed, double rotation, boolean squaredInputs) {
+    public static void drive(double speed, double rotation, boolean squaredInputs) {
             differentialDrive.arcadeDrive(speed, rotation, squaredInputs);
     }
 
-    public static void flightStickDrive(double speed, double rotation) {
-        drive(OI.flightstickCurve(speed),OI.flightstickCurve(rotation),true);
-    }
 
     public static DriveTrain getInstance() {
         if (instance == null) {
