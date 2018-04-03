@@ -14,8 +14,8 @@ public class FlightStickDrive extends Command {
     @Override
     protected void execute() {
 
-        DriveTrain.drive(OI.getFlightStick().getX(GenericHID.Hand.kRight),
-                OI.getFlightStick().getY(GenericHID.Hand.kRight),true);
+        DriveTrain.drive(OI.getFlightStick().getY(GenericHID.Hand.kRight),
+                -OI.getFlightStick().getX(GenericHID.Hand.kRight),true);
     }
 
     @Override

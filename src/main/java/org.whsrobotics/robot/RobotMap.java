@@ -6,8 +6,9 @@ public class RobotMap {
 
     public enum MotorControllers {
 
-        DRIVE_LEFT_FRONT(1), DRIVE_RIGHT_FRONT(2),
-        DRIVE_LEFT_BACK(3), DRIVE_RIGHT_BACK(4);
+        //TODO: Set these to the right talons
+        DRIVE_LEFT_FRONT(5), DRIVE_RIGHT_FRONT(7),
+        DRIVE_LEFT_BACK(6), DRIVE_RIGHT_BACK(8);
 
         public int tal;
 
@@ -17,7 +18,7 @@ public class RobotMap {
 
     }
 
-    public static final int FLIGHTSTICK = 3;
+    public static final int FLIGHTSTICK = 0;
 
     public static void init() {
 

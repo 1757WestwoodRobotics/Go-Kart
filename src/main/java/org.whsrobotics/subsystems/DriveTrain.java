@@ -5,6 +5,7 @@ import edu.wpi.first.wpilibj.SpeedControllerGroup;
 import edu.wpi.first.wpilibj.Talon;
 import edu.wpi.first.wpilibj.command.Subsystem;
 import edu.wpi.first.wpilibj.drive.DifferentialDrive;
+import org.whsrobotics.commands.FlightStickDrive;
 import org.whsrobotics.robot.OI;
 import org.whsrobotics.robot.RobotMap;
 
@@ -39,6 +40,7 @@ public class DriveTrain extends Subsystem {
 
     @Override
     protected void initDefaultCommand() {
+        setDefaultCommand(new FlightStickDrive());
     }
 
     @Override
