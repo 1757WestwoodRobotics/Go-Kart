@@ -7,6 +7,8 @@ import org.whsrobotics.subsystems.DriveTrain;
 
 public class FlightStickDrive extends Command {
 
+    private static FlightStickDrive instance;
+
     public FlightStickDrive() {
         requires(DriveTrain.getInstance());
     }
@@ -15,7 +17,7 @@ public class FlightStickDrive extends Command {
     protected void execute() {
 
         DriveTrain.drive(OI.getFlightStick().getY(GenericHID.Hand.kRight),
-                -OI.getFlightStick().getX(GenericHID.Hand.kRight),true);
+                -OI.getFlightStick().getX(GenericHID.Hand.kRight),false);
     }
 
     @Override
@@ -27,4 +29,13 @@ public class FlightStickDrive extends Command {
     protected boolean isFinished() {
         return false;
     }
+
+    public static FlightStickDrive getInstance() {
+        if (instance == null) {
+            instance = new FlightStickDrive();
+        }
+
+        return instance;
+    }
+
 }
