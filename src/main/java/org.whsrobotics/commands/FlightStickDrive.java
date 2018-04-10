@@ -11,6 +11,8 @@ public class FlightStickDrive extends Command {
         requires(DriveTrain.getInstance());
     }
 
+    public static FlightStickDrive instance;
+
     @Override
     protected void execute() {
 
@@ -27,4 +29,13 @@ public class FlightStickDrive extends Command {
     protected boolean isFinished() {
         return false;
     }
+
+    public static FlightStickDrive getInstance() {
+        if (instance == null) {
+            instance = new FlightStickDrive();
+        }
+
+        return instance;
+    }
+
 }
