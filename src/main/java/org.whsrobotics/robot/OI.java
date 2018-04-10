@@ -25,17 +25,6 @@ public class OI {
         return instance;
     }
 
-    private enum FlightstickButton {
-            kTrigger(1);
-
-            private int value;
-
-            FlightstickButton(int value) {
-                this.value = value;
-
-        }
-    }
-
     public static Joystick getFlightStick() {
         return flightStick;
     }
