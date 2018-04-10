@@ -1,9 +1,6 @@
 package org.whsrobotics.robot;
 
 import edu.wpi.first.wpilibj.Joystick;
-import edu.wpi.first.wpilibj.buttons.JoystickButton;
-import edu.wpi.first.wpilibj.command.Command;
-import org.whsrobotics.commands.FlightStickDrive;
 import org.whsrobotics.subsystems.DriveTrain;
 
 import static org.whsrobotics.robot.RobotMap.FLIGHTSTICK;
