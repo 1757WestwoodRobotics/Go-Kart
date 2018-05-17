@@ -7,8 +7,8 @@ public class RobotMap {
     public enum MotorControllers {
 
         //TODO: Set to the right talons
-        DRIVE_LEFT_FRONT(1), DRIVE_RIGHT_FRONT(2),
-        DRIVE_LEFT_BACK(3), DRIVE_RIGHT_BACK(4);
+        DRIVE_LEFT_FRONT(5), DRIVE_RIGHT_FRONT(6),
+        DRIVE_LEFT_BACK(7), DRIVE_RIGHT_BACK(8);
 
         public int tal;
 
