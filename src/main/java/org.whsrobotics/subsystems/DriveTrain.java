@@ -15,8 +15,6 @@ public class DriveTrain extends Subsystem {
     private static WPI_TalonSRX leftBack;
     private static WPI_TalonSRX rightFront;
     private static WPI_TalonSRX rightBack;
-    private static WPI_TalonSRX rightMiddle;
-    private static WPI_TalonSRX leftMiddle;
 
     private static SpeedControllerGroup leftDrive;
     private static SpeedControllerGroup rightDrive;
@@ -29,13 +27,11 @@ public class DriveTrain extends Subsystem {
 
         leftFront = new WPI_TalonSRX(RobotMap.MotorControllers.DRIVE_LEFT_FRONT.tal);
         rightFront = new WPI_TalonSRX(RobotMap.MotorControllers.DRIVE_RIGHT_FRONT.tal);
-        leftMiddle = new WPI_TalonSRX(RobotMap.MotorControllers.DRIVE_LEFT_MIDDLE.tal);
-        rightMiddle = new WPI_TalonSRX(RobotMap.MotorControllers.DRIVE_RIGHT_MIDDLE.tal);
         leftBack = new WPI_TalonSRX(RobotMap.MotorControllers.DRIVE_LEFT_BACK.tal);
         rightBack = new WPI_TalonSRX(RobotMap.MotorControllers.DRIVE_RIGHT_BACK.tal);
 
-        leftDrive = new SpeedControllerGroup(leftFront, leftMiddle, leftBack);
-        rightDrive = new SpeedControllerGroup(rightFront, rightMiddle, rightBack);
+        leftDrive = new SpeedControllerGroup(leftFront, leftBack);
+        rightDrive = new SpeedControllerGroup(rightFront, rightBack);
 
         differentialDrive = new DifferentialDrive(leftDrive, rightDrive);
 
