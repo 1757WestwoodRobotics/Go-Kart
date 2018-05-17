@@ -3,6 +3,7 @@ package org.whsrobotics.robot;
 import edu.wpi.first.wpilibj.TimedRobot;
 import edu.wpi.first.wpilibj.command.Scheduler;
 import org.whsrobotics.commands.FlightStickDrive;
+import org.whsrobotics.commands.Brake;
 import org.whsrobotics.subsystems.DriveTrain;
 
 public class Robot extends TimedRobot {
@@ -25,6 +26,7 @@ public class Robot extends TimedRobot {
         FlightStickDrive.getInstance();
         DriveTrain.getInstance();
         OI.getInstance();
+        Brake.getInstance();
 
         System.out.println("Robot initialized");
     }
