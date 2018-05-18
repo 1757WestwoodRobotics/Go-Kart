@@ -1,5 +1,6 @@
 package org.whsrobotics.subsystems;
 
+import com.ctre.phoenix.motorcontrol.NeutralMode;
 import com.ctre.phoenix.motorcontrol.can.WPI_TalonSRX;
 import edu.wpi.first.wpilibj.SpeedControllerGroup;
 import edu.wpi.first.wpilibj.Talon;
@@ -64,4 +65,10 @@ public class DriveTrain extends Subsystem {
         differentialDrive.stopMotor();
     }
 
+    public static void setBrakeMode() {
+        leftFront.setNeutralMode(NeutralMode.Brake);
+        leftBack.setNeutralMode(NeutralMode.Brake);
+        rightFront.setNeutralMode(NeutralMode.Brake);
+        rightBack.setNeutralMode(NeutralMode.Brake);
+    }
 }

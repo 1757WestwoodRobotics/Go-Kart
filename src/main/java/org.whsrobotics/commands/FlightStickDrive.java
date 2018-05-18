@@ -10,7 +10,6 @@ public class FlightStickDrive extends Command {
     public FlightStickDrive() {
         requires(DriveTrain.getInstance());
     }
-
     public static FlightStickDrive instance;
 
     @Override
@@ -37,5 +36,4 @@ public class FlightStickDrive extends Command {
 
         return instance;
     }
-
 }
