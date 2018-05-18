@@ -1,6 +1,8 @@
 package org.whsrobotics.robot;
 
 import edu.wpi.first.wpilibj.Joystick;
+import edu.wpi.first.wpilibj.buttons.JoystickButton;
+import edu.wpi.first.wpilibj.command.Command;
 import org.whsrobotics.subsystems.DriveTrain;
 
 import static org.whsrobotics.robot.RobotMap.FLIGHTSTICK;
@@ -15,7 +17,7 @@ public class OI {
 
         flightStick = new Joystick(FLIGHTSTICK);
 
-        (new JoystickButton(flightStick, 1).whileHeld(new Command() {
+        (new JoystickButton(flightStick, 1)).whileHeld(new Command() {
 
             /**
             * Billy's new brake command, created on 5/17/18

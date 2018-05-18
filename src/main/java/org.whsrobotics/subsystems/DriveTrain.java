@@ -71,4 +71,11 @@ public class DriveTrain extends Subsystem {
         rightFront.setNeutralMode(NeutralMode.Brake);
         rightBack.setNeutralMode(NeutralMode.Brake);
     }
+
+    public static void setCoastMode() {
+        leftFront.setNeutralMode(NeutralMode.Coast);
+        leftBack.setNeutralMode(NeutralMode.Coast);
+        rightFront.setNeutralMode(NeutralMode.Coast);
+        rightBack.setNeutralMode(NeutralMode.Coast);
+    }
 }
