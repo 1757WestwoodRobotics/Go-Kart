@@ -31,6 +31,8 @@ public class DriveTrain extends Subsystem {
         leftBack = new WPI_TalonSRX(RobotMap.MotorControllers.DRIVE_LEFT_BACK.tal);
         rightBack = new WPI_TalonSRX(RobotMap.MotorControllers.DRIVE_RIGHT_BACK.tal);
 
+        setBrakeMode();
+
         leftDrive = new SpeedControllerGroup(leftFront, leftBack);
         rightDrive = new SpeedControllerGroup(rightFront, rightBack);
 
