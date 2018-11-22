@@ -17,35 +17,8 @@ public class OI {
 
         flightStick = new Joystick(FLIGHTSTICK);
 
-//        (new JoystickButton(flightStick, 1)).whileHeld(new Command() {
-//
-//            /**
-//            * Billy's new brake command, created on 5/17/18
-//            * Happy birthday, Spencer
-//            * I think I did it this time, but I have no idea which button this is
-//            **/
-//
-//            @Override
-//            protected void initialize() {
-//                System.out.println("Billy's Brake Command has initialized and is beginning to brake the robot");
-//                DriveTrain.setBrakeMode();
-//            }
-//
-//            @Override
-//            protected void end() {
-//                DriveTrain.setCoastMode();
-//            }
-//
-//            @Override
-//            protected void interrupted() {
-//                System.out.println("Billy's Brake Command was rudely interrupted");
-//            }
-//
-//            @Override
-//            protected boolean isFinished() {
-//                return false;
-//            }
-//        });
+//        (new JoystickButton(flightStick, 1)).whileHeld(new Command() {});
+
 
     }
 

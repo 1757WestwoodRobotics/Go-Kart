@@ -2,12 +2,11 @@ package org.whsrobotics.subsystems;
 
 import com.ctre.phoenix.motorcontrol.NeutralMode;
 import com.ctre.phoenix.motorcontrol.can.WPI_TalonSRX;
+import edu.wpi.first.wpilibj.AnalogInput;
 import edu.wpi.first.wpilibj.SpeedControllerGroup;
-import edu.wpi.first.wpilibj.Talon;
 import edu.wpi.first.wpilibj.command.Subsystem;
 import edu.wpi.first.wpilibj.drive.DifferentialDrive;
 import org.whsrobotics.commands.FlightStickDrive;
-import org.whsrobotics.robot.OI;
 import org.whsrobotics.robot.RobotMap;
 
 public class DriveTrain extends Subsystem {
@@ -51,7 +50,7 @@ public class DriveTrain extends Subsystem {
     }
 
     public static void drive(double speed, double rotation, boolean squaredInputs) {
-            differentialDrive.arcadeDrive(speed, rotation, squaredInputs);
+        differentialDrive.arcadeDrive(speed, rotation, squaredInputs);
     }
 
 

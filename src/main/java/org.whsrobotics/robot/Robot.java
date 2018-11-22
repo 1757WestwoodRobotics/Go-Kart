@@ -7,48 +7,23 @@ import org.whsrobotics.subsystems.DriveTrain;
 
 public class Robot extends TimedRobot {
 
-    // Init
-
     /**
      * Robot-wide initialization code should go here.
-     * <p>
-     * <p>Users should override this method for default Robot-wide initialization which will be called
-     * when the robot is first powered on. It will be called exactly one time.
-     * <p>
-     * <p>Warning: the Driver Station "Robot Code" light and FMS "Robot Ready" indicators will be off
-     * until RobotInit() exits. Code in RobotInit() that waits for enable will cause the robot to
-     * never indicate that the code is ready, causing the robot to be bypassed in a match.
      */
     @Override
     public void robotInit() {
-
         FlightStickDrive.getInstance();
         DriveTrain.getInstance();
         OI.getInstance();
 
-        System.out.println("Robot initialized");
+        System.out.println("Go-Kart ready");
     }
 
     /**
-     * Initialization code for disabled mode should go here.
-     * <p>
-     * <p>Users should override this method for initialization code which will be called each time the
-     * robot enters disabled mode.
+     * Code that is run every loop regardless of mode. Put telemetry and health in here.
      */
     @Override
-    public void disabledInit() {
-
-    }
-
-
-    /**
-     * Initialization code for teleop mode should go here.
-     * <p>
-     * <p>Users should override this method for initialization code which will be called each time the
-     * robot enters teleop mode.
-     */
-    @Override
-    public void teleopInit() {
+    public void robotPeriodic() {
 
     }
 
@@ -59,4 +34,14 @@ public class Robot extends TimedRobot {
     public void teleopPeriodic() {
         Scheduler.getInstance().run();
     }
+
+
+    /**
+     * Initialization code for disabled mode should go here. Called each time the robot is disabled.
+     */
+    @Override
+    public void disabledInit() {
+
+    }
+
 }

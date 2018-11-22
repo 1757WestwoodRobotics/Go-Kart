@@ -10,11 +10,11 @@ public class FlightStickDrive extends Command {
     public FlightStickDrive() {
         requires(DriveTrain.getInstance());
     }
+
     public static FlightStickDrive instance;
 
     @Override
     protected void execute() {
-
         DriveTrain.drive(OI.getFlightStick().getY(GenericHID.Hand.kRight),
                 -OI.getFlightStick().getX(GenericHID.Hand.kRight),true);
     }
