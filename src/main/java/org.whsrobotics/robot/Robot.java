@@ -2,7 +2,6 @@ package org.whsrobotics.robot;
 
 import edu.wpi.first.wpilibj.TimedRobot;
 import edu.wpi.first.wpilibj.command.Scheduler;
-import org.whsrobotics.commands.FlightStickDrive;
 import org.whsrobotics.subsystems.DriveTrain;
 
 public class Robot extends TimedRobot {
@@ -12,11 +11,10 @@ public class Robot extends TimedRobot {
      */
     @Override
     public void robotInit() {
-        FlightStickDrive.getInstance();
         DriveTrain.getInstance();
         OI.getInstance();
 
-        System.out.println("Go-Kart ready");
+        System.out.println("The Go-Kart is ready");
     }
 
     /**
@@ -24,7 +22,7 @@ public class Robot extends TimedRobot {
      */
     @Override
     public void robotPeriodic() {
-
+        Telemetry.periodic();
     }
 
     /**
@@ -41,7 +39,7 @@ public class Robot extends TimedRobot {
      */
     @Override
     public void disabledInit() {
-
+        DriveTrain.stopDrive();
     }
 
 }
