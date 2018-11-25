@@ -5,8 +5,14 @@ import edu.wpi.first.wpilibj.command.Command;
 import org.whsrobotics.robot.OI;
 import org.whsrobotics.subsystems.DriveTrain;
 
+/**
+ *
+ */
 public class BAPMDrive extends Command {
 
+    /**
+     *
+     */
     public BAPMDrive() {
         requires(DriveTrain.getInstance());
     }

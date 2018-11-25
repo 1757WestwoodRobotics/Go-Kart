@@ -5,11 +5,17 @@ import edu.wpi.first.networktables.NetworkTableInstance;
 
 import java.util.HashMap;
 
+/**
+ *
+ */
 public class Telemetry {
 
     private static NetworkTable nt;
     private static HashMap<String, Object> data;
 
+    /**
+     *
+     */
     public static void init() {
         nt = NetworkTableInstance.getDefault().getTable("Robot/Telemetry");
     }
@@ -20,8 +26,8 @@ public class Telemetry {
     }
 
     public static void periodic() {
-        // Check if data has changed
-        // If not, publishTelemetry()
+        // TODO: Check if data has changed
+        //  If not, publishTelemetry()
         publishTelemetry();
     }
 

@@ -93,7 +93,7 @@ public class DriveTrain extends Subsystem {
      */
     public static void BAPMdrive(double speed, double rotation) {
 
-        // Only enable BAPM if speed is greater than 0.05 (positive) AND rotation is minimal (0.1?)!!!
+        // Only enable BAPM if speed is greater than 0.05 (positive) AND rotation is minimal (0.1)!!!
         if (speed > 0.05 && rotation < 0.1) {
             bapmController.setPercentVoltage(speed);
         }
