@@ -5,6 +5,9 @@ import edu.wpi.first.wpilibj.command.Command;
 import org.whsrobotics.robot.OI;
 import org.whsrobotics.subsystems.DriveTrain;
 
+/**
+ * A WPILib Command that controls a DriveTrain. Uses the flight stick joystick as defined in OI.
+ */
 public class FlightStickDrive extends Command {
 
     public FlightStickDrive() {
@@ -19,7 +22,7 @@ public class FlightStickDrive extends Command {
 
     @Override
     protected void end() {
-        DriveTrain.stopDrive();
+        DriveTrain.stopDrive();     // Stop the motors
     }
 
     @Override

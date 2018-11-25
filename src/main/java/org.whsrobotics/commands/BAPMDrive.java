@@ -6,12 +6,13 @@ import org.whsrobotics.robot.OI;
 import org.whsrobotics.subsystems.DriveTrain;
 
 /**
- *
+ * A WPILib Command that controls the BAPM Controller. Designed to work with a DriveTrain subsystem. Uses the flight
+ * stick joystick as defined in OI.
  */
 public class BAPMDrive extends Command {
 
     /**
-     *
+     * Constructor for the Command.
      */
     public BAPMDrive() {
         requires(DriveTrain.getInstance());
@@ -25,13 +26,13 @@ public class BAPMDrive extends Command {
 
     @Override
     protected void end() {
-        DriveTrain.stopDrive();
-        (new FlightStickDrive()).start();
+        DriveTrain.stopDrive();     // Stop the motors
+        (new FlightStickDrive()).start();       // Start the FlightStickDrive() Command to run in-place of this
     }
 
     @Override
     protected boolean isFinished() {
-        return false;
+        return !DriveTrain.getBAPMmode();       // Only allow this command to run if the BAPM mode switch is turned on
     }
 
 }

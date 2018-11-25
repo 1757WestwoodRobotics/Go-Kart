@@ -13,6 +13,7 @@ public class Robot extends TimedRobot {
     public void robotInit() {
         DriveTrain.getInstance();
         OI.getInstance();
+        Telemetry.init();
 
         System.out.println("The Go-Kart is ready");
     }
