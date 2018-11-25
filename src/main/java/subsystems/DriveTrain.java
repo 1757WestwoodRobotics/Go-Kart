@@ -101,18 +101,21 @@ public class DriveTrain extends Subsystem {
     }
 
     /**
+     * Normal method for driving the Go-Kart using WPILib's DifferentialDrive class and arcade style driving.
      *
-     * @param speed
-     * @param rotation
+     * @param speed the back and forth output to the drive train [0, 1.0]
+     * @param rotation the rotation output (turning by spinning opposing sides in different directions) [0, 1.0]
      */
     public static void drive(double speed, double rotation) {
         differentialDrive.arcadeDrive(speed, rotation);
     }
 
     /**
+     * BAPM method for driving the Go-Kart normally with the BAPM enabled in certain instances. It only works if the Go-Kart
+     * is moving forward and NOT rotating.
      *
-     * @param speed
-     * @param rotation
+     * @param speed the back and forth output to the drive train [0, 1.0]
+     * @param rotation the rotation output (turning by spinning opposing sides in different directions) [0, 1.0]
      */
     public static void BAPMdrive(double speed, double rotation) {
 
@@ -135,7 +138,7 @@ public class DriveTrain extends Subsystem {
     }
 
     /**
-     *
+     * Stops all motors
      */
     public static void stopDrive() {
         differentialDrive.stopMotor();
@@ -143,7 +146,7 @@ public class DriveTrain extends Subsystem {
     }
 
     /**
-     *
+     * Sets brake mode for the main drive train motor controllers (not the BAPM)
      */
     public static void setBrakeMode() {
         leftFront.setNeutralMode(NeutralMode.Brake);
@@ -153,7 +156,7 @@ public class DriveTrain extends Subsystem {
     }
 
     /**
-     *
+     * Sets coast mode for the main drive train motor controllers (not the BAPM)
      */
     public static void setCoastMode() {
         leftFront.setNeutralMode(NeutralMode.Coast);
@@ -163,8 +166,9 @@ public class DriveTrain extends Subsystem {
     }
 
     /**
+     * A getter method to get the status of the switch in the user interface.
      *
-     * @return
+     * @return whether BAPMmode is enabled in the user interface
      */
     public static boolean getBAPMmode() {
         return BAPMmode;
