@@ -1,4 +1,4 @@
-package org.whsrobotics.utils;
+package utils;
 
 import edu.wpi.first.wpilibj.AnalogOutput;
 

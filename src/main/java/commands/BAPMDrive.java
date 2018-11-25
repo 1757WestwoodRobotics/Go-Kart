@@ -1,9 +1,9 @@
-package org.whsrobotics.commands;
+package commands;
 
 import edu.wpi.first.wpilibj.GenericHID;
 import edu.wpi.first.wpilibj.command.Command;
-import org.whsrobotics.robot.OI;
-import org.whsrobotics.subsystems.DriveTrain;
+import robot.OI;
+import subsystems.DriveTrain;
 
 /**
  * A WPILib Command that controls the BAPM Controller. Designed to work with a DriveTrain subsystem. Uses the flight

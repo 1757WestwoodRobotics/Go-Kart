@@ -1,4 +1,4 @@
-package org.whsrobotics.robot;
+package robot;
 
 /**
  * Defines the hardware constants of the robot such as port numbers and IDs.

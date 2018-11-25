@@ -1,4 +1,4 @@
-package org.whsrobotics.subsystems;
+package subsystems;
 
 import com.ctre.phoenix.motorcontrol.NeutralMode;
 import com.ctre.phoenix.motorcontrol.can.WPI_TalonSRX;
@@ -6,10 +6,10 @@ import edu.wpi.first.wpilibj.SpeedControllerGroup;
 import edu.wpi.first.wpilibj.command.Subsystem;
 import edu.wpi.first.wpilibj.drive.DifferentialDrive;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
-import org.whsrobotics.commands.FlightStickDrive;
-import org.whsrobotics.robot.RobotMap;
-import org.whsrobotics.robot.Telemetry;
-import org.whsrobotics.utils.BAPMController;
+import commands.FlightStickDrive;
+import robot.RobotMap;
+import robot.Telemetry;
+import utils.BAPMController;
 
 /**
  * Code that pertains to the drive train mechanism of the Go-Kart

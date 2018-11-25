@@ -1,8 +1,8 @@
-package org.whsrobotics.robot;
+package robot;
 
 import edu.wpi.first.wpilibj.Joystick;
 import edu.wpi.first.wpilibj.buttons.JoystickButton;
-import org.whsrobotics.commands.BAPMDrive;
+import commands.BAPMDrive;
 
 public class OI {
 

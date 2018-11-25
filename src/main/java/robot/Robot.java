@@ -1,8 +1,8 @@
-package org.whsrobotics.robot;
+package robot;
 
 import edu.wpi.first.wpilibj.TimedRobot;
 import edu.wpi.first.wpilibj.command.Scheduler;
-import org.whsrobotics.subsystems.DriveTrain;
+import subsystems.DriveTrain;
 
 public class Robot extends TimedRobot {
 
